@@ -3,11 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+
+        //Pipeline
         PipelineCommand pipelineCommand = new PipelineCommand();
+
         pipelineCommand.addInterface(new CommandColor());
         pipelineCommand.addInterface(new SizeCommand());
         pipelineCommand.addInterface(new LengthCommand());
 
+        // Objekt
         CEO ceo = new CEO();
         Customer customer = new Customer();
 
@@ -18,6 +22,7 @@ public class Main {
 
         Receipt receipt = new Receipt();
 
+        // Lägger in värden i kund
         menuCustomer.addName(customer);
         menuCustomer.addAddress(customer);
         menuCustomer.addEmail(customer);
@@ -30,6 +35,7 @@ public class Main {
             Skirt skirt = new Skirt();
             TShirt tShirt = new TShirt();
 
+            // Meddelar CEO
             pants.addPropertyChangeListener(ceo);
             skirt.addPropertyChangeListener(ceo);
             tShirt.addPropertyChangeListener(ceo);
@@ -52,12 +58,15 @@ public class Main {
                     menuPants.menuType(pantBuilder);
                     Pants orderPants = pantBuilder.build();
                     System.out.println("---------------------------------------------------");
+                    // Skickar meddelande till CEO om att en order är lagd
                     pants.setReceivedOrder(true);
                     System.out.println("---------------------------------------------------");
                     pipelineCommand.useCommand(orderPants);
                     System.out.println("---------------------------------------------------");
+                    // Skickar meddelande till CEO är färdig tillverkad
                     pants.setFinishedManufacturing(true);
                     System.out.println("---------------------------------------------------");
+                    // Kvitto
                     receipt.pantsReceipt(orderPants, customer);
                     return;
 

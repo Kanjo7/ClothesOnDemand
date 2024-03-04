@@ -138,7 +138,7 @@ public class Pants {
         // Rapporterar förändring och lagrar gammal beställning
         boolean oldState = this.receivedOrder;
         this.receivedOrder = receivedOrder;
-        // tar emot tre stycken paramterar
+        // tar emot tre stycken parametrar
         this.propertyChangeSupport.firePropertyChange("en order har mottagits", oldState, this.receivedOrder);
     }
 
