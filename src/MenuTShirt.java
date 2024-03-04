@@ -80,7 +80,7 @@ public class MenuTShirt {
 
         while (true) {
             System.out.println("");
-            System.out.println("Välj krage");
+            System.out.println("Välj nacke");
             System.out.println("1. Rund hals");
             System.out.println("2. V-ringad");
             System.out.print("Ditt val: ");
