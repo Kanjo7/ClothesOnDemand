@@ -4,10 +4,10 @@ import java.util.UUID;
 
 public class Pants {
 
-    // random ID för byxor
+    // Random ID för byxor
     private String id = UUID.randomUUID().toString();
 
-    // variabler
+    // Variabler
     private String name = "Byxor";
     private String type;
     private String size;
@@ -16,15 +16,19 @@ public class Pants {
     private String fit;
     private String length;
     private String material;
+
+    // Klass som tillhandhåller support för att lyssna på förändringar i vårt objekt
     private PropertyChangeSupport propertyChangeSupport;
     private boolean receivedOrder = false;
     private boolean finishedManufacturing = false;
 
+    // sätter this som referens till det här objektet
+    // Konstruktor utan parameter
     public Pants() {
         this.propertyChangeSupport = new PropertyChangeSupport(this);
     }
 
-    // konstruktor
+    // Konstruktor
     public Pants(String id, String name, String type, String size, double price, String color, String fit, String length, String material, PropertyChangeSupport propertyChangeSupport, boolean receivedOrder, boolean finishedManufacturing) {
         this.id = id;
         this.name = name;
@@ -40,11 +44,12 @@ public class Pants {
         this.finishedManufacturing = finishedManufacturing;
     }
 
+    // Skickar in en lyssnare och lägger till listener
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         this.propertyChangeSupport.addPropertyChangeListener(listener);
     }
 
-    //getters and setters
+    // Getters and setters
     public String getId() {
         return id;
     }
@@ -130,8 +135,10 @@ public class Pants {
     }
 
     public void setReceivedOrder(boolean receivedOrder) {
+        // Rapporterar förändring och lagrar gammal beställning
         boolean oldState = this.receivedOrder;
         this.receivedOrder = receivedOrder;
+        // tar emot tre stycken paramterar
         this.propertyChangeSupport.firePropertyChange("en order har mottagits", oldState, this.receivedOrder);
     }
 

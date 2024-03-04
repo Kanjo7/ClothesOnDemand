@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class SizeCommand implements CommandInterface {
+
+    // Användaren väljer storlek för byxor
     @Override
     public void execute(Pants pant) {
         System.out.println("1. Medium");
@@ -18,6 +20,7 @@ public class SizeCommand implements CommandInterface {
         }
     }
 
+    // Användaren väljer storlek för Tshirt
     @Override
     public void execute(TShirt tShirt) {
         System.out.println("1. Large");
@@ -35,6 +38,7 @@ public class SizeCommand implements CommandInterface {
         }
     }
 
+    // Användaren väljer storlek för kjol
     @Override
     public void execute(Skirt skirt) {
         System.out.println("1. Small");

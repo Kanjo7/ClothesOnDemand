@@ -12,10 +12,10 @@ public class LengthCommand implements CommandInterface {
         int userChoice = scanner.nextInt();
         switch (userChoice) {
             case 1:
-                System.out.println("Klipper önskad byxlängd 33");
+                System.out.println("Klipper önskad byxlängd 33\n");
                 break;
             case 2:
-                System.out.println("Klipper önskad byxlängd 29");
+                System.out.println("Klipper önskad byxlängd 29\n");
                 break;
         }
     }

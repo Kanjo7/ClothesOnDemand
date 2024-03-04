@@ -13,14 +13,18 @@ public class Skirt {
     private String color;
     private String waistline;
     private String pattern;
+
+    // Klass som tillhandhåller support för att lyssna på förändringar i vårt objekt
     private PropertyChangeSupport propertyChangeSupport;
     private boolean receivedOrder = false;
     private boolean finishedManufacturing = false;
 
+    // sätter this som referens till det här objektet
     public Skirt() {
         this.propertyChangeSupport = new PropertyChangeSupport(this);
     }
 
+    // Konstruktor
     public Skirt(String id, String name, String size, double price, String material, String color, String waistline, String pattern, PropertyChangeSupport propertyChangeSupport, boolean receivedOrder, boolean finishedManufacturing) {
         this.id = id;
         this.name = name;
@@ -35,6 +39,7 @@ public class Skirt {
         this.finishedManufacturing = finishedManufacturing;
     }
 
+    // Skickar in en lyssnare och lägger till listener
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         this.propertyChangeSupport.addPropertyChangeListener(listener);
     }
@@ -117,8 +122,10 @@ public class Skirt {
     }
 
     public void setReceivedOrder(boolean receivedOrder) {
+        // Rapporterar förändring och lagrar gammal beställning
         boolean oldState = this.receivedOrder;
         this.receivedOrder = receivedOrder;
+        // tar emot tre stycken paramterar
         this.propertyChangeSupport.firePropertyChange("en order har mottagits", oldState, this.receivedOrder);
     }
 

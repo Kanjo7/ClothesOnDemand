@@ -6,13 +6,14 @@ public class Receipt {
 
     // Kundinformation och kvitto för ett par byxor
     public void pantsReceipt(Pants pants, Customer customer) {
+
         System.out.println("Kvitto");
 
         System.out.println("ID: " + customer.getId());
         System.out.println("Namn: " + customer.getName());
         System.out.println("Adress: " + customer.getAddress());
         System.out.println("Email: " + customer.getEmail());
-        System.out.println("--------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
         System.out.println("Order ID " + pants.getId());
         System.out.println("Information om din order: ");
@@ -21,18 +22,18 @@ public class Receipt {
         System.out.println(pants.getFit());
         System.out.println(pants.getType());
         System.out.println("Pris för byxorna: " + pants.getPrice() + " kronor");
-
     }
 
     // Kundinformation och kvitto för kjol
     public void skirtReceipt(Skirt skirt, Customer customer) {
+
         System.out.println("Kvitto");
 
         System.out.println("ID: " + customer.getId());
         System.out.println("Namn: " + customer.getName());
         System.out.println("Adress: " + customer.getAddress());
         System.out.println("Email: " + customer.getEmail());
-        System.out.println("--------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
         System.out.println("Order ID " + skirt.getId());
         System.out.println("Information om din order: ");
@@ -45,13 +46,14 @@ public class Receipt {
 
     // Kundinformation och kvitto för Tshirt
     public void tShirtReceipt(TShirt tShirt, Customer customer) {
+
         System.out.println("Kvitto");
 
         System.out.println("ID: " + customer.getId());
         System.out.println("Namn: " + customer.getName());
         System.out.println("Adress: " + customer.getAddress());
         System.out.println("Email: " + customer.getEmail());
-        System.out.println("--------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
         System.out.println("Order ID: " + tShirt.getId());
         System.out.println("Information om din order: ");

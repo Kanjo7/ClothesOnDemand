@@ -7,9 +7,9 @@ public class MenuPants {
     public MenuPants() {
     }
 
+    // Användaren väljer material för byxor
     public void menuMaterial(PantBuilder pantBuilder) {
 
-        // Användaren väljer material för byxor
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

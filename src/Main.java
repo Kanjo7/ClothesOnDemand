@@ -51,13 +51,13 @@ public class Main {
                     menuPants.menuFit(pantBuilder);
                     menuPants.menuType(pantBuilder);
                     Pants orderPants = pantBuilder.build();
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     pants.setReceivedOrder(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     pipelineCommand.useCommand(orderPants);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     pants.setFinishedManufacturing(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     receipt.pantsReceipt(orderPants, customer);
                     return;
 
@@ -67,13 +67,13 @@ public class Main {
                     menuSkirt.menuWaistline(skirtBuilder);
                     menuSkirt.menuPattern(skirtBuilder);
                     Skirt orderSkirt = skirtBuilder.build();
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     skirt.setReceivedOrder(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     pipelineCommand.useCommand(orderSkirt);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     skirt.setFinishedManufacturing(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     receipt.skirtReceipt(orderSkirt, customer);
                     return;
 
@@ -83,13 +83,13 @@ public class Main {
                     menuTShirt.menuSleeves(tShirtBuilder);
                     menuTShirt.menuNeck(tShirtBuilder);
                     TShirt orderTshirt = tShirtBuilder.build();
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     tShirt.setReceivedOrder(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     pipelineCommand.useCommand(orderTshirt);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     tShirt.setFinishedManufacturing(true);
-                    System.out.println("--------------------------------------------");
+                    System.out.println("---------------------------------------------------");
                     receipt.tShirtReceipt(orderTshirt, customer);
                     return;
             }
