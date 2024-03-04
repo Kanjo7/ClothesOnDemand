@@ -3,7 +3,11 @@ import java.beans.PropertyChangeSupport;
 import java.util.UUID;
 
 public class Pants {
+
+    // random ID för byxor
     private String id = UUID.randomUUID().toString();
+
+    // variabler
     private String name = "Byxor";
     private String type;
     private String size;
@@ -20,6 +24,7 @@ public class Pants {
         this.propertyChangeSupport = new PropertyChangeSupport(this);
     }
 
+    // konstruktor
     public Pants(String id, String name, String type, String size, double price, String color, String fit, String length, String material, PropertyChangeSupport propertyChangeSupport, boolean receivedOrder, boolean finishedManufacturing) {
         this.id = id;
         this.name = name;
@@ -39,6 +44,7 @@ public class Pants {
         this.propertyChangeSupport.addPropertyChangeListener(listener);
     }
 
+    //getters and setters
     public String getId() {
         return id;
     }
@@ -118,6 +124,7 @@ public class Pants {
     public void setPropertyChangeSupport(PropertyChangeSupport propertyChangeSupport) {
         this.propertyChangeSupport = propertyChangeSupport;
     }
+
     public boolean isReceivedOrder() {
         return receivedOrder;
     }
@@ -127,6 +134,7 @@ public class Pants {
         this.receivedOrder = receivedOrder;
         this.propertyChangeSupport.firePropertyChange("en order har mottagits", oldState, this.receivedOrder);
     }
+
     public boolean isFinishedManufacturing() {
         return finishedManufacturing;
     }

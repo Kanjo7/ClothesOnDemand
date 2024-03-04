@@ -3,6 +3,8 @@ import java.beans.PropertyChangeSupport;
 import java.util.UUID;
 
 public class Skirt {
+
+    // Variabler
     private String id = UUID.randomUUID().toString();
     private String name = "Kjol";
     private String size;
@@ -37,6 +39,7 @@ public class Skirt {
         this.propertyChangeSupport.addPropertyChangeListener(listener);
     }
 
+    // Setters and Getters
     public String getId() {
         return id;
     }

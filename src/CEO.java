@@ -3,10 +3,12 @@ import java.beans.PropertyChangeListener;
 
 public class CEO implements PropertyChangeListener {
 
+    // Variabler
     private int id;
 
     private String name;
 
+    // Konstruktor
     public CEO() {
     }
 
@@ -14,6 +16,8 @@ public class CEO implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         System.out.println("CEO har meddelats om " + evt.getPropertyName());
     }
+
+    // Getters and setters
     public int getId() {
         return id;
     }

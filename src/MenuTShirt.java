@@ -2,9 +2,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuTShirt {
+
+    // Konstruktor
     public MenuTShirt() {
     }
 
+    // Användaren väljer material för Tshirt
     public void menuMaterial(TShirtBuilder tShirtBuilder) {
 
         Scanner scanner = new Scanner(System.in);
@@ -37,6 +40,7 @@ public class MenuTShirt {
         }
     }
 
+    // Användaren väljer armlängd för Tshirt
     public void menuSleeves(TShirtBuilder tShirtBuilder) {
 
         Scanner scanner = new Scanner(System.in);
@@ -69,6 +73,7 @@ public class MenuTShirt {
         }
     }
 
+    // Användaren väljer krage för Tshirt
     public void menuNeck(TShirtBuilder tShirtBuilder) {
 
         Scanner scanner = new Scanner(System.in);

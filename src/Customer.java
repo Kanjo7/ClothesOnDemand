@@ -2,11 +2,13 @@ import java.util.UUID;
 
 public class Customer {
 
+    // Variabler
     private String id = UUID.randomUUID().toString();
     private String name;
     private String address;
     private String email;
 
+    // Konstruktor
     public Customer() {
     }
 
@@ -17,6 +19,7 @@ public class Customer {
         this.email = email;
     }
 
+    // Getters and Setters
     public String getId() {
         return id;
     }

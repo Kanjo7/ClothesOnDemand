@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class MenuCustomer {
 
+    // Konstruktor
     public MenuCustomer() {
     }
 
+    // Användaren fyller i sitt namn
     public void addName(Customer customer) {
         System.out.print("Namn: ");
         Scanner scanner = new Scanner(System.in);
@@ -15,6 +17,7 @@ public class MenuCustomer {
         customer.setName(userInput + " " + userInput1);
     }
 
+    // Användaren fyller i sin adress
     public void addAddress(Customer customer) {
         System.out.print("Adress: ");
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +25,7 @@ public class MenuCustomer {
         customer.setAddress(userInputAddress);
     }
 
+    // Användaren fyller i sitt mail
     public void addEmail(Customer customer) {
         System.out.print("Email: ");
         Scanner scanner = new Scanner(System.in);

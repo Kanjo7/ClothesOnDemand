@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class TShirt {
 
+    // Variabler
     private String id = UUID.randomUUID().toString();
 
     private String name = "Tshirt";
@@ -46,6 +47,7 @@ public class TShirt {
         this.propertyChangeSupport.addPropertyChangeListener(listener);
     }
 
+    // Getters and Setters
     public String getId() {
         return id;
     }

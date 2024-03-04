@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class CommandColor implements CommandInterface {
 
+    // Välja färg för ett par byxor
     @Override
     public void execute(Pants pant) {
         System.out.println("");
@@ -20,6 +21,7 @@ public class CommandColor implements CommandInterface {
         }
     }
 
+    // Välja färg för Tshirt
     @Override
     public void execute(TShirt tShirt) {
         System.out.println("");
@@ -38,6 +40,7 @@ public class CommandColor implements CommandInterface {
         }
     }
 
+    // Välja färg för kjol
     @Override
     public void execute(Skirt skirt) {
         System.out.println("");

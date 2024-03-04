@@ -2,11 +2,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuPants {
+
+    // Konstruktor
     public MenuPants() {
     }
 
     public void menuMaterial(PantBuilder pantBuilder) {
 
+        // Användaren väljer material för byxor
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -28,6 +31,7 @@ public class MenuPants {
                     default:
                         System.out.println("Felaktigt val. Var god välj igen.");
                 }
+                // Fångar upp om användaren fyller i en bokstav eller fel siffra
             } catch (InputMismatchException e) {
                 System.out.println(e);
                 System.out.println("Felaktig inmatning. Var god ange ett heltal.");
@@ -37,6 +41,7 @@ public class MenuPants {
         }
     }
 
+    // Användaren väljer passform för byxor
     public void menuFit(PantBuilder pantBuilder) {
 
         Scanner scanner = new Scanner(System.in);
@@ -69,6 +74,7 @@ public class MenuPants {
         }
     }
 
+    // Användaren väljer typ för byxor
     public void menuType(PantBuilder pantBuilder) {
 
         Scanner scanner = new Scanner(System.in);

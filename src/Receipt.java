@@ -1,8 +1,10 @@
 public class Receipt {
 
+    // konstruktor
     public Receipt() {
     }
 
+    // Kundinformation och kvitto för ett par byxor
     public void pantsReceipt(Pants pants, Customer customer) {
         System.out.println("Kvitto");
 
@@ -22,6 +24,7 @@ public class Receipt {
 
     }
 
+    // Kundinformation och kvitto för kjol
     public void skirtReceipt(Skirt skirt, Customer customer) {
         System.out.println("Kvitto");
 
@@ -37,9 +40,10 @@ public class Receipt {
         System.out.println(skirt.getMaterial());
         System.out.println(skirt.getWaistline());
         System.out.println(skirt.getPattern());
-        System.out.println("Pris för kjolen: "  + skirt.getPrice() + " kronor");
+        System.out.println("Pris för kjolen: " + skirt.getPrice() + " kronor");
     }
 
+    // Kundinformation och kvitto för Tshirt
     public void tShirtReceipt(TShirt tShirt, Customer customer) {
         System.out.println("Kvitto");
 

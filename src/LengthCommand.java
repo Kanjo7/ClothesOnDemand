@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class LengthCommand implements CommandInterface {
 
+    // Användaren väljer byxlängd
     @Override
     public void execute(Pants pant) {
         System.out.println("1. 32");
